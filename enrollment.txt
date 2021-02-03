@@ -1,0 +1,3 @@
+1,Kavuma,Mark,M,10-10-2020,Symptomatic,Mugamba256
+2,Yasmin,Hassan, F,   10-12-2020, synptomatic,Mugamba256
+3,Bahindi,Emmanuel,M,10-12-2020,asymtomatic,Mugamba256

@@ -1,40 +1,34 @@
-#include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
-FILE *ptr;
-int j,n;
+#include <string.h>
+    typedef struct Patient {
+        char fname[50];
+        char sname[50];
+        char gender[50];
+    }list;
 void main(){
-char patient[2][6][100];
-char *str2 = "Mugamba";
-printf("Enter the record to register:");
-scanf("%d",&n);
+    int size,g;
+    struct Patient list[size];
 
-if ((ptr = fopen("sample.txt","a")) == NULL) {
-   /* code here */ perror("Error:");
-                    exit(1);
-}else {
-   /* code here */ 
-  for (int i = 0; i < n; i++) {
-      for(j = 0; j< 6; j++){
- /* code here */ 
-   printf("\n$ ");
-   scanf("%s",patient[i][j]);
-      }
-  
-   puts("--------------------------");
+     printf("\nEnter the number patients to store:");
+    scanf("%d",&size);
+    for (int i = 0; i < size; i++) {
+       /* code here */
+       printf("\nRecord %d",i+1);
+       puts("Name");
+       printf("> ");
+       scanf("%s %s",list[i].fname,list[i].sname);
 
+        puts("Gender");
+       printf("> ");
+       scanf("%s",list[i].gender);
     }
-    for (int i = 0; i < n; i++) {
-     // for(int j = 0; j< 6; j++){
-        fprintf(ptr,"%-3s %-6s %-6s %-6s %-6s %-6s\n",patient[i][0],patient[i][1],patient[i][2],patient[i][3],patient[i][4],patient[i][5]);
-       //  }
-     }
-        fclose(ptr);
+    
+     for (int i = 0; i < size; i++) {
+       /* code here */ 
+       puts(list[i].fname);
+       puts(list[i].sname);
+       puts(list[i].gender);
+    }
 }
-//char *pos = strstr(str1,str2);
-
-
-
-}
-
-
+   
+    
